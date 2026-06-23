@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CanonicalMarketingRecord",
+  "type": "object",
+  "required": ["date", "channel", "campaign_name"],
+  "properties": {
+    "date": { "type": "string", "format": "date" },
+    "channel": { "type": "string" },
+    "campaign_name": { "type": "string" },
+    "impressions": { "type": "number", "minimum": 0 },
+    "clicks": { "type": "number", "minimum": 0 },
+    "spend": { "type": "number", "minimum": 0 },
+    "leads": { "type": "number", "minimum": 0 },
+    "conversions": { "type": "number", "minimum": 0 },
+    "revenue": { "type": "number", "minimum": 0 },
+    "trello_card_id": { "type": ["string", "null"] },
+    "trello_activity_type": { "type": ["string", "null"] },
+    "trello_completed_at": { "type": ["string", "null"], "format": "date-time" }
+  },
+  "additionalProperties": false
+}
